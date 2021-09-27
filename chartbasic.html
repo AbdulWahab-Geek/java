@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>chart</title>
+        <style>
+            body{
+                     font-family: Roboto, sans-serif;
+                }
+                #chart{
+                        max-width: 450px;
+                        margin: 35px auto;
+                    }
+                    #chart2{
+                        max-width: 450px;
+                        margin: 35px auto;
+                    }
+        </style>
+    </head>
+    <body>
+        <div id="chart">
+        </div>
+
+        <br><br><br><br>
+        <div id="chart2">
+
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script>
+            var options={
+                chart: {type: 'line'},
+                series: [{name: 'sales',data: [30,40,45,50,49,60,70,91,125]}],
+                xaxis: {categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]}
+            }
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+           
+
+            var firstchart={
+                chart:{type:'line'},
+                series:[{name:'papulation',data: [15856456548,1566565654,10646516842,8946546879,6549845]}],
+                xaxis:{categories: [1,2,3,4,5]}
+                
+            }
+           var chart1 = new ApexCharts(document.querySelector("#chart2"),  firstchart);
+            chart1.render();
+        </script>    
+        <!-- <script>
+
+        </script>                 -->
+    
+    </body>    
+</html>

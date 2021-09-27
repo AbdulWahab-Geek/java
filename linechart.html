@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chart</title>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #chart{
+                max-width: 300px;
+                margin: 35px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="chart"></div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script>
+            var option={
+                chart:{type:'line'},
+                stroke: {curve: 'smooth'},
+                series:[{name:'total student', data:[55,35,12,21,25]},{name:'Month',deta:[20,30,40,50,60]}],
+                xaxis:{categories:["5th","6th","7th","8th","9th"]}
+            }
+            var chart=new ApexCharts(document.querySelector('#chart'),option);
+            chart.render();
+        </script>
+    </body>
+</html>
