@@ -64,3 +64,12 @@ var option5={
 };
 var chart=new ApexCharts(document.querySelector('#piechart2'),option5);
 chart.render();
+
+var option5={
+    chart:{type:'pie'},
+    series:[35,49,33,55,88],
+    labels:["April","May",'June','July',"septembor"],
+    dataLabels:{enabled:false}
+};
+var chart=new ApexCharts(document.querySelector('#piechart3'),option5);
+chart.render();
